@@ -10,6 +10,25 @@ export const useRecipeStore = defineStore('recipe', () => {
 
   const recipes = ref([
     {
+      id: 3,
+      thumbnail: "https://thai-foodie.com/wp-content/uploads/2023/09/rad-na-2.jpg",
+      name: "Sweet Thai Chili Tofu",
+      origin: "Thailand",
+      tags: [
+        "Rice",
+        "Tofu",
+        "Sweet",
+        "Vegan",
+      ],
+      ingredients: [
+        "1 Packet Jasmine Rice",
+        "1 Packet Extra-Firm Tofu",
+        "1 Sweet Onion",
+        "1 Spoonful(s) Garlic",
+        "Corn Starch",
+      ],
+    },
+    {
       id: 0,
       thumbnail: "https://thai-foodie.com/wp-content/uploads/2023/09/rad-na-2.jpg",
       name: "Rad Na",
@@ -73,24 +92,6 @@ export const useRecipeStore = defineStore('recipe', () => {
         "1 Spoonful(s) Hoison Sauce",
         "1 Spoonful(s) Garlic",
         "1 Spoonful(s) Ginger",
-      ],
-    },
-    {
-      id: 2,
-      thumbnail: "https://thai-foodie.com/wp-content/uploads/2023/09/rad-na-2.jpg",
-      name: "Sweet Thai Chili Tofu",
-      origin: "Thailand",
-      tags: [
-        "Rice",
-        "Tofu",
-        "Sweet",
-        "Vegan",
-      ],
-      ingredients: [
-        "1 Packet Jasmine Rice",
-        "1 Packet Extra-Firm Tofu",
-        "1 Sweet Onion",
-        "1 Spoonful(s) Garlic",
       ],
     },
   ]);
