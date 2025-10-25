@@ -1,9 +1,7 @@
 <script setup>
 
-const props = defineProps({
-    recipeTitle: String,
-    ingredients: Array,
-    thumbnail: String
+defineProps({
+    recipe: Object,
 })
 
 </script>
@@ -11,18 +9,22 @@ const props = defineProps({
 <template>
 
      <div class="recipe-container">
-        <span class="recipe-title">{{ props.recipeTitle }}</span>
+        <span class="recipe-title">{{ recipe.name }}<span class="recipe-country">&nbsp;&nbsp;{{ recipe.origin }}</span></span>
         <div class="recipe-tags-container">
-            <calcite-chip scale="s">China</calcite-chip>
-            <calcite-chip scale="s">Taiwan</calcite-chip>
+            <calcite-chip 
+            v-for="tag in recipe.tags"  
+            scale="s">{{ tag }}</calcite-chip>
         </div>
         <calcite-list>
             <calcite-list-item 
-            v-for="(ingredient, index) in props.ingredients" 
+            v-for="(ingredient, index) in recipe.ingredients" 
             :label="ingredient"
-            :icon-start="`number-circle-${index + 1}-f`"  
+            :icon-start="`number-circle-${index + 1}-f`"
+            interaction-mode="static"
+            selection-mode="none"
             />
         </calcite-list>
+        <hr />
       </div>
 
 
@@ -33,19 +35,31 @@ const props = defineProps({
 .recipe-container {
     display: flex;
     flex-direction: column;
-    gap: var(--calcite-spacing-sm);
-    padding: var(--calcite-spacing-sm);
+    gap: var(--calcite-spacing-md);
+    padding-inline: var(--calcite-spacing-sm);
 }
 
 .recipe-title {
     color: var(--calcite-color-text-1);
-    font-size: var(--calcite-font-size-2);
+    font-size: var(--calcite-font-size-xl);
     font-weight: var(--calcite-font-weight-medium);
+}
+
+.recipe-country {
+    color: var(--calcite-color-text-3);
+    font-size: var(--calcite-font-size-sm);
+    font-weight: var(--calcite-font-weight-light);
+    text-transform: uppercase;
 }
 
 .recipe-tags-container {
     display: flex;
     gap: var(--calcite-spacing-xs);
+}
+
+hr {
+    border: 2px var(--calcite-color-foreground-2) solid;
+    width: 25%;
 }
 
 </style>

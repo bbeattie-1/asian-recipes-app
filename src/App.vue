@@ -17,9 +17,7 @@ const { recipes } = useRecipeStore()
       <Recipe 
       v-for="recipe in recipes" 
       :key="recipe.id" 
-      :recipe-title="recipe.name" 
-      :ingredients=recipe.ingredients
-      :thumbnail="recipe.thumbnail" 
+      :recipe="recipe"
       />
     </div>
   </calcite-shell>

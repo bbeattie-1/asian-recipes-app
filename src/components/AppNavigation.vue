@@ -11,7 +11,7 @@
 
 * {
     --calcite-color-foreground-1: var(--calcite-color-brand);
-    --calcite-icon-color: #ffffff; 
+    --calcite-icon-color: #fffff; 
     --calcite-color-text-1: #ffffff;  
     --calcite-color-text-2: #edd3d3;  
 }
