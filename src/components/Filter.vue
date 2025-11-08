@@ -16,7 +16,6 @@
 
 #filter-container {
     padding: var(--calcite-spacing-lg);
-    padding-inline: var(--calcite-spacing-xxl);
 }
 
 calcite-input-text {

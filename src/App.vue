@@ -31,8 +31,10 @@ const { recipes } = useRecipeStore()
 .recipes-container {
   display: flex;
   flex-direction: column;
-  padding-inline: var(--calcite-spacing-lg);
+  padding-inline: var(--calcite-spacing-sm);
+  padding-bottom: var(--calcite-spacing-lg);
   gap: var(--calcite-spacing-lg);
 }
+
 
 </style>
