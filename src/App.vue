@@ -4,6 +4,7 @@ import AppNavigation from './components/AppNavigation.vue';
 
 import { useRecipeStore } from './stores/recipes';
 import Recipe from './components/Recipe.vue';
+import Filter from './components/Filter.vue';
 
 const { recipes } = useRecipeStore()
 
@@ -13,6 +14,7 @@ const { recipes } = useRecipeStore()
 
   <calcite-shell class="calcite-mode-dark">
     <AppNavigation />
+    <Filter />
     <div class="recipes-container">
       <Recipe 
       v-for="recipe in recipes" 
@@ -29,7 +31,7 @@ const { recipes } = useRecipeStore()
 .recipes-container {
   display: flex;
   flex-direction: column;
-  padding: var(--calcite-spacing-lg);
+  padding-inline: var(--calcite-spacing-lg);
   gap: var(--calcite-spacing-lg);
 }
 

@@ -24,7 +24,7 @@ defineProps({
             selection-mode="none"
             />
         </calcite-list>
-        <hr />
+        <span class="divider">中国菜中国菜</span>
       </div>
 
 
@@ -57,9 +57,11 @@ defineProps({
     gap: var(--calcite-spacing-xs);
 }
 
-hr {
-    border: 2px var(--calcite-color-foreground-2) solid;
-    width: 25%;
+.divider {
+    color: var(--calcite-color-foreground-2);
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 0.75rem;
 }
 
 </style>

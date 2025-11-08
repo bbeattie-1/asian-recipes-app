@@ -10,6 +10,30 @@ export const useRecipeStore = defineStore('recipe', () => {
 
   const recipes = ref([
     {
+      id: 4,
+      thumbnail: "https://thai-foodie.com/wp-content/uploads/2023/09/rad-na-2.jpg",
+      name: "Chow Mein",
+      origin: "China",
+      tags: [
+        "Noodles",
+        "Chicken",
+        "Sweet",
+        "Savory",
+      ],
+      ingredients: [
+        "1 Packet Egg Noodles",
+        "1 Chicken Breast Diced",
+        "1 Sweet Onion",
+        "1 Carrot",
+        "1 Spoonful(s) Garlic",
+        "1 Spoonful Dark Soy Sauce",
+        "1 Spoonful Soy Sauce",
+        "1 Spoonful Brown Sugar",
+
+        "Corn Starch",
+      ],
+    },
+    {
       id: 3,
       thumbnail: "https://thai-foodie.com/wp-content/uploads/2023/09/rad-na-2.jpg",
       name: "Sweet Thai Chili Tofu",
@@ -57,7 +81,7 @@ export const useRecipeStore = defineStore('recipe', () => {
       name: "Pad See Ew",
       origin: "Thailand",
       tags: [
-        "Noodle",
+        "Noodles",
         "Chicken",
         "Savory",
         "Umami",
